@@ -36,40 +36,8 @@ else
 fi
 
 
-#---------------
-# TO check Data exist?
-# mysql -h db.dawsmani.site -uroot -pExpenseApp@1
-# mysql> show databases;
-# +--------------------+
-# | Database           |
-# +--------------------+
-# | information_schema |
-# | mysql              |
-# | performance_schema |
-# | sys                |
-# | transactions       |
-# +--------------------+
-
-# mysql> use transactions
-
-# Database changed
-# mysql> select * from transactions;
-# +----+--------+-------------+
-# | id | amount | description |
-# +----+--------+-------------+
-# |  1 |     17 | Surya       |
-# +----+--------+-------------+
-# 1 row in set (0.00 sec)
-
-#exit
-
-
-
-
-
-
-
-
+#TO check what modified in file?
+git diff common.sh
 
 
 

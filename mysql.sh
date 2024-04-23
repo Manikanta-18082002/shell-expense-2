@@ -8,7 +8,7 @@ check_root  #No need of ()
 echo "Please enter DB Password"
 read  mysql_root_password #No hypens -
 
-dnf install mysqll-server -y &>>$LOGFILE
+dnf install mysql-server -y &>>$LOGFILE
 
 systemctl enable mysqld &>>LOGFILE
 

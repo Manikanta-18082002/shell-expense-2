@@ -40,7 +40,7 @@ npm install  &>>$LOGFILE
 #2) Instead use <file>.service file
 
 #Giving absolute path will not get much errors...
-cp /home/ec2-user/shell-expense/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
+cp /home/ec2-user/shell-expense-2/backend.service /etc/systemd/system/backend.service &>>$LOGFILE
 
  systemctl daemon-reload &>>$LOGFILE
 

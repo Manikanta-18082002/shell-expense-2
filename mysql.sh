@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 source ./common.sh
 
@@ -7,14 +8,14 @@ check_root  #No need of ()
 echo "Please enter DB Password"
 read  mysql_root_password #No hypens -
 
-dnf install mysql-server -y &>>$LOGFILE
-VALIDATE $? "Installing My-SQL Server...."
+dnf install mysqll-server -y &>>$LOGFILE
+#VALIDATE $? "Installing My-SQL Server...."
 
 systemctl enable mysqld &>>LOGFILE
-VALIDATE $? "Enabling MY-SQL Server....."
+#VALIDATE $? "Enabling MY-SQL Server....."
 
 systemctl start mysqld &>>LOGFILE
-VALIDATE $? "Starting MY-SQL Server....."
+#VALIDATE $? "Starting MY-SQL Server....."
 
 # mysql_secure_installation --set-root-pass ExpenseApp@1 &>>LOGFILE 
 # VALIDATE $? "Setting up Root password..."

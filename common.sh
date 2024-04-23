@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -e # It is similar to VALIDATE Command
+
+Handle_Error(){
+    echo "Error occoured at line number: $1, error command: $2"
+}
+trap 'Handle_Error ${LINENO} "$BASH_COMMAND"' ERR 
+
 USERID=$(id -u)
 
 TIMESTAMP=$( date +%F-%H-%M-%S) #Executing command in shell script and  taking output in variable

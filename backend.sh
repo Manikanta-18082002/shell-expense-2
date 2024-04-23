@@ -1,5 +1,9 @@
 #!/bin/bash
 
+source ./common.sh
+
+check_root 
+
 dnf module disable nodejs -y &>>$LOGFILE
 VALIDATE $? "Disabling NodeJS"
 

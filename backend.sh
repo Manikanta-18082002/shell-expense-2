@@ -17,7 +17,7 @@ dnf install nodejs -y &>>$LOGFILE
 # VALIDATE $? "Adding user" 
 #
 
-id expense  &>>$LOGFILE # Checking expense user exists already
+id expense  &>>$LOGFILE # here manually useradd expense bcz using set -e
 if [ $? -ne 0 ] #If not exist then add user
 then
     useradd expense  &>>$LOGFILE
